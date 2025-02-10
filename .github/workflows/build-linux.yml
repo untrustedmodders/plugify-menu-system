@@ -41,7 +41,6 @@ env:
 
 jobs:
   build:
-    if: false
     name: ${{ matrix.compiler.name }}
     runs-on: ubuntu-latest
     container: registry.gitlab.steamos.cloud/steamrt/sniper/sdk
