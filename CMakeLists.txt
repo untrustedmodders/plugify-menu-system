@@ -43,7 +43,7 @@ function(set_or_external_dir VAR_NAME DEFAULT_DIR)
 	set(${VAR_NAME} "${${VAR_NAME}}" PARENT_SCOPE)
 endfunction()
 
-set_or_external_dir(DYNLIBUTILS_DIR "memory_utils")
+set_or_external_dir(DYNLIBUTILS_DIR "dynlibutils")
 set_or_external_dir(FMT_DIR "fmt")
 set_or_external_dir(PLUGIFY_DIR "plugify")
 set_or_external_dir(SOURCESDK_DIR "sourcesdk")
