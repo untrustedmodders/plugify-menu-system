@@ -1,0 +1,19 @@
+# IDEs
+.idea
+.vscode
+.vs
+
+# CMake
+CMakeUserPresets.json
+
+# Build results
+/cmake-build*
+/build
+
+# Resource
+/res
+
+# vcpkg
+/vcpkg_installed
+/vcpkg.json
+/vcpkg-configuration.json
