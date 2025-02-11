@@ -25,7 +25,7 @@
       "name": "GetMenuSystemProfiles",
       "funcName": "GetMenuSystemProfiles",
       "description": "Gets the menu profile system.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." }
       ],
       "retType": "ptr64"
@@ -34,7 +34,7 @@
       "name": "CreateMenu",
       "funcName": "CreateMenu",
       "description": "Creates a new menu instance.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
         { "name": "pProfile", "type": "ptr64", "description": "The profile style for the menu." }
       ],
@@ -44,7 +44,7 @@
       "name": "DisplayMenu",
       "funcName": "DisplayMenu",
       "description": "Displays a menu to a player.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance to display." },
         { "name": "aSlot", "type": "int", "description": "The player slot to display the menu to." },
@@ -57,7 +57,7 @@
       "name": "CloseMenu",
       "funcName": "CloseMenu",
       "description": "Closes a menu instance.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance to close." }
       ],
@@ -67,7 +67,7 @@
       "name": "GetMenuProfile",
       "funcName": "GetMenuProfile",
       "description": "Retrieves a menu profile by name.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pProfileSystem", "type": "ptr64", "description": "The profile system instance." },
         { "name": "sName", "type": "string", "description": "The name of the profile to retrieve." }
       ],
@@ -77,7 +77,7 @@
       "name": "GetMenuTitle",
       "funcName": "GetMenuTitle",
       "description": "Gets the title text of a menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
       ],
       "retType": "string"
@@ -86,7 +86,7 @@
       "name": "SetMenuTitle",
       "funcName": "SetMenuTitle",
       "description": "Sets the title text of a menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "sName", "type": "string", "description": "The new title text." }
       ]
@@ -95,7 +95,7 @@
       "name": "GetMenuItemStyles",
       "funcName": "GetMenuItemStyles",
       "description": "Gets the style flags of a menu item.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "iItem", "type": "int", "description": "The item index to to get styles." }
       ],
@@ -105,7 +105,7 @@
       "name": "AddMenuItem",
       "funcName": "AddMenuItem",
       "description": "Adds a new item to the menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "eFlags", "type": "uint8", "description": "Style flags for the item." },
         { "name": "sContent", "type": "string", "description": "The text content of the item." },
@@ -161,7 +161,7 @@
       "name": "RemoveMenuItem",
       "funcName": "RemoveMenuItem",
       "description": "Removes an item from the menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "iItem", "type": "int", "description": "The index of the item to remove." }
       ]
@@ -170,7 +170,7 @@
       "name": "GetMenuControls",
       "funcName": "GetMenuControls",
       "description": "Gets the current control flags of the menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
       ],
       "return": "uint8"
@@ -179,7 +179,7 @@
       "name": "SetMenuControls",
       "funcName": "SetMenuControls",
       "description": "Sets the control flags for the menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "eNewControls", "type": "uint8", "description": "New control flags." }
       ]
@@ -188,7 +188,7 @@
       "name": "GetMenuPosition",
       "funcName": "GetMenuPosition",
       "description": "Gets the current cursor position for a player in the menu.",
-      "parameters": [
+      "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
         { "name": "aSlot", "type": "int32", "description": "The player slot to get a position." }
       ],
