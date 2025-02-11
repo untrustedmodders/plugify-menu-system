@@ -113,7 +113,7 @@ extern "C" PLUGIN_API void SetMenuTitle(IMenu *pMenu, plg::string sName) {
  * 
  * @return              The style flags as a bitmask (IMenu::ItemStyleFlags_t).
  */
-extern "C" PLUGIN_API unsigned char GetMenuItemSytles(IMenu *pMenu, int iItem) {
+extern "C" PLUGIN_API unsigned char GetMenuItemStyles(IMenu *pMenu, int iItem) {
 	return plugify::g_pMenuBinging->Menu_GetItemSytles(pMenu, iItem);
 }
 

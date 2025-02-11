@@ -10,7 +10,7 @@
 		GetMenuProfile;
 		GetMenuTitle;
 		SetMenuTitle;
-		GetMenuItemSytles;
+		GetMenuItemStyles;
 		AddMenuItem;
 		RemoveMenuItem;
 		GetMenuControls;
