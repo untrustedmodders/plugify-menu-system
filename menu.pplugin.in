@@ -18,7 +18,7 @@
     {
       "name": "GetMenuSystem",
       "funcName": "GetMenuSystem",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the menu system.",
       "retType": {
         "description": "Pointer to the menu system.",
@@ -28,7 +28,7 @@
     {
       "name": "GetMenuSystemProfiles",
       "funcName": "GetMenuSystemProfiles",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the menu profile system.",
       "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system." }
@@ -41,7 +41,7 @@
     {
       "name": "CreateMenu",
       "funcName": "CreateMenu",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Creates a new menu instance.",
       "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
@@ -55,7 +55,7 @@
     {
       "name": "DisplayMenu",
       "funcName": "DisplayMenu",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Displays a menu to a player.",
       "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
@@ -72,7 +72,7 @@
     {
       "name": "CloseMenu",
       "funcName": "CloseMenu",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Closes a menu instance.",
       "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
@@ -86,7 +86,7 @@
     {
       "name": "GetMenuProfile",
       "funcName": "GetMenuProfile",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Retrieves a menu profile by name.",
       "paramTypes": [
         { "name": "pProfileSystem", "type": "ptr64", "description": "The profile system instance." },
@@ -100,7 +100,7 @@
     {
       "name": "GetMenuTitle",
       "funcName": "GetMenuTitle",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the title text of a menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
@@ -113,7 +113,7 @@
     {
       "name": "SetMenuTitle",
       "funcName": "SetMenuTitle",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Sets the title text of a menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -127,7 +127,7 @@
     {
       "name": "GetMenuItemStyles",
       "funcName": "GetMenuItemStyles",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the style flags of a menu item.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -141,7 +141,7 @@
     {
       "name": "AddMenuItem",
       "funcName": "AddMenuItem",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Adds a new item to the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -202,7 +202,7 @@
     {
       "name": "RemoveMenuItem",
       "funcName": "RemoveMenuItem",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Removes an item from the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -216,7 +216,7 @@
     {
       "name": "GetMenuControls",
       "funcName": "GetMenuControls",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the current control flags of the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
@@ -229,7 +229,7 @@
     {
       "name": "SetMenuControls",
       "funcName": "SetMenuControls",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Sets the control flags for the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -243,7 +243,7 @@
     {
       "name": "GetMenuPosition",
       "funcName": "GetMenuPosition",
-      "groups": "Menus",
+      "group": "Menus",
       "description": "Gets the current cursor position for a player in the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
