@@ -81,7 +81,7 @@ namespace plugify
 		}
 
 		if(m_pLogger->IsChannelEnabled(LV_DETAILED)) {
-			m_pLogger->DetailedFormat("Menu's module handle is %p\n", m_pMetamodPlugin.GetModuleHandle());
+			m_pLogger->DetailedFormat("Menu's module handle is %p\n", m_pMetamodPlugin.GetHandle());
 		}
 
 		return true;
