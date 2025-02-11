@@ -18,6 +18,7 @@ project(plugify-menu_system
 string(REGEX REPLACE "^[^-_]*[-_]([^-_]*)[-_]*(.*)" "\\1\\2" PROJECT_NAME_SUBSTRING "${PROJECT_NAME}")
 string(TOLOWER "${PROJECT_NAME_SUBSTRING}" PROJECT_NAME_LOWER)
 string(TOUPPER "${PROJECT_NAME_SUBSTRING}" PROJECT_NAME_UPPER)
+set(PROJECT_PACKAGE "${PROJECT_NAME}-${PROJECT_VERSION}")
 
 set(PROJECT_OUTPUT_NAME "menu")
 
@@ -30,6 +31,7 @@ string(TIMESTAMP PROJECT_BUILD_TIME "%H:%M:%S")
 set(EXTERNAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external")
 set(INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 set(SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
+set(SYMBOLS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/sym")
 set(SOURCE_EXPORT_DIR "${SOURCE_DIR}/export")
 set(EXPORTS_DIR "${CMAKE_BINARY_DIR}/exports")
 
@@ -45,6 +47,7 @@ endfunction()
 
 set_or_external_dir(DYNLIBUTILS_DIR "dynlibutils")
 set_or_external_dir(FMT_DIR "fmt")
+set_or_external_dir(LOGGER_DIR "logger")
 set_or_external_dir(PLUGIFY_DIR "plugify")
 set_or_external_dir(SOURCESDK_DIR "sourcesdk")
 
@@ -52,12 +55,29 @@ include(cmake/platform/shared.cmake)
 
 include(cmake/dynlibutils.cmake)
 include(cmake/fmt.cmake)
+include(cmake/logger.cmake)
 include(cmake/plugify.cmake)
 include(cmake/sourcesdk.cmake)
 
 set(SOURCE_FILES
 	${SOURCE_EXPORT_DIR}/menu.cpp
-	${SOURCE_DIR}/plugin.cpp
+	${SOURCE_DIR}/menusystem_plugin.cpp
+)
+
+if(LINUX)
+	set(LINK_OPTIONS
+		${LINK_OPTIONS}
+
+		-Wl,--version-script,${SYMBOLS_DIR}/version_script.lds
+	)
+endif()
+
+set(COMPILE_DEFINITIONS
+	PLUGIFY_IS_DEBUG=$<STREQUAL:${CMAKE_BUILD_TYPE},Debug>
+	PLUGIFY_IS_RELEASE=$<STREQUAL:${CMAKE_BUILD_TYPE},Release>
+
+	PLUGIFY_LIBRARY_SUFFIX="${CMAKE_SHARED_LIBRARY_SUFFIX}"
+	PLUGIFY_LIBRARY_PREFIX="${CMAKE_SHARED_LIBRARY_PREFIX}"
 )
 
 set(INCLUDE_DIRS
@@ -68,6 +88,7 @@ set(INCLUDE_DIRS
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 include(cmake/menusystem/generate_exports.cmake)
+include(cmake/menusystem/generate_pplugin.cmake)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
 	C_STANDARD 17
@@ -91,6 +112,6 @@ target_compile_options(${PROJECT_NAME} PRIVATE ${COMPILER_OPTIONS} ${SOURCESDK_C
 target_link_options(${PROJECT_NAME} PRIVATE ${LINK_OPTIONS} ${SOURCESDK_LINK_OPTIONS})
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${COMPILE_DEFINITIONS} ${PLUGIFY_COMPILE_DEFINITIONS} ${SOURCESDK_COMPILE_DEFINITIONS})
-target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE_DIRS} ${DYNLIBUTILS_INCLUDE_DIRS} ${FMT_INCLUDE_DIRS} ${PLUGIFY_INCLUDE_DIRS} ${SOURCESDK_INCLUDE_DIRS})
+target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE_DIRS} ${DYNLIBUTILS_INCLUDE_DIRS} ${FMT_INCLUDE_DIRS} ${LOGGER_INCLUDE_DIRS} ${PLUGIFY_INCLUDE_DIRS} ${SOURCESDK_INCLUDE_DIRS})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE ${LINK_LIBRARIES} ${DYNLIBUTILS_BINARY_DIR} ${SOURCESDK_BINARY_DIR})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${LINK_LIBRARIES} ${DYNLIBUTILS_BINARY_DIR} ${LOGGER_BINARY_DIR} ${SOURCESDK_BINARY_DIR})

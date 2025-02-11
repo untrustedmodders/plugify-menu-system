@@ -1,7 +1,6 @@
 #include <plugin_export.h>
-
-class IMenuSystem;
+#include <imenubinding.hpp>
 
 extern "C" PLUGIN_API IMenuSystem *MenuSystem() {
-	return nullptr;
+	return plugify::g_pMenuBinging->MenuSystem();
 }

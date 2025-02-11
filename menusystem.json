@@ -4,7 +4,7 @@
       "name": "Menu System",
       "type": "plugin",
       "author": "Wend4r",
-      "description": "The x86/x64 API Hooking Library.",
+      "description": "The Menu System for Source 2 games.",
       "versions": [
         {
           "version": 1,

@@ -11,3 +11,6 @@
 [submodule "Source SDK"]
 	path = external/sourcesdk
 	url = https://github.com/Wend4r/sourcesdk.git
+[submodule "Logger"]
+	path = external/logger
+	url = https://github.com/Wend4r/s2u-logger.git
