@@ -21,7 +21,7 @@
       "groups": "Menus",
       "description": "Gets the menu system.",
       "retType": {
-        "description": "Pointer to the menu system instance.",
+        "description": "Pointer to the menu system.",
         "type": "ptr64"
       }
     },
@@ -31,7 +31,7 @@
       "groups": "Menus",
       "description": "Gets the menu profile system.",
       "paramTypes": [
-        { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." }
+        { "name": "pSystem", "type": "ptr64", "description": "The menu system." }
       ],
       "retType": {
         "description": "Pointer to the menu profile system instance.",
@@ -44,7 +44,7 @@
       "groups": "Menus",
       "description": "Creates a new menu instance.",
       "paramTypes": [
-        { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
+        { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
         { "name": "pProfile", "type": "ptr64", "description": "The profile style for the menu." }
       ],
       "retType": {
@@ -58,7 +58,7 @@
       "groups": "Menus",
       "description": "Displays a menu to a player.",
       "paramTypes": [
-        { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
+        { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance to display." },
         { "name": "aSlot", "type": "int", "description": "The player slot to display the menu to." },
         { "name": "iStartPosition", "type": "int", "description": "The starting item position (use MENU_FIRST_ITEM_INDEX for default)." },
@@ -75,7 +75,7 @@
       "groups": "Menus",
       "description": "Closes a menu instance.",
       "paramTypes": [
-        { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
+        { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance to close." }
       ],
       "retType": {
