@@ -7,7 +7,7 @@
   "createdByURL": "https://github.com/untrustedmodders/plugify-menu_system",
   "docsURL": "https://github.com/untrustedmodders/plugify-menu_system",
   "downloadURL": "https://github.com/untrustedmodders/plugify-menu_system/releases/download/${PROJECT_VERSION}/${PROJECT_PACKAGE}.zip",
-  "updateURL": "https://untrustedmodders.github.com/plugify-menu_system/menusystem.json",
+  "updateURL": "https://untrustedmodders.github.io/plugify-menu_system/menusystem.json",
   "entryPoint": "bin/menu",
   "supportedPlatforms": [],
   "languageModule": {
