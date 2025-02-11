@@ -17,11 +17,13 @@
   "exportedMethods": [
     {
       "name": "GetMenuSystem",
+      "funcName": "GetMenuSystem",
       "description": "Gets the menu system.",
       "retType": "ptr64"
     },
     {
       "name": "GetMenuSystemProfiles",
+      "funcName": "GetMenuSystemProfiles",
       "description": "Gets the menu profile system.",
       "parameters": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." }
@@ -30,6 +32,7 @@
     },
     {
       "name": "CreateMenu",
+      "funcName": "CreateMenu",
       "description": "Creates a new menu instance.",
       "parameters": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
@@ -39,6 +42,7 @@
     },
     {
       "name": "DisplayMenu",
+      "funcName": "DisplayMenu",
       "description": "Displays a menu to a player.",
       "parameters": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
@@ -51,6 +55,7 @@
     },
     {
       "name": "CloseMenu",
+      "funcName": "CloseMenu",
       "description": "Closes a menu instance.",
       "parameters": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system instance." },
@@ -60,6 +65,7 @@
     },
     {
       "name": "GetMenuProfile",
+      "funcName": "GetMenuProfile",
       "description": "Retrieves a menu profile by name.",
       "parameters": [
         { "name": "pProfileSystem", "type": "ptr64", "description": "The profile system instance." },
@@ -69,6 +75,7 @@
     },
     {
       "name": "GetMenuTitle",
+      "funcName": "GetMenuTitle",
       "description": "Gets the title text of a menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
@@ -77,6 +84,7 @@
     },
     {
       "name": "SetMenuTitle",
+      "funcName": "SetMenuTitle",
       "description": "Sets the title text of a menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -85,6 +93,7 @@
     },
     {
       "name": "GetMenuItemStyles",
+      "funcName": "GetMenuItemStyles",
       "description": "Gets the style flags of a menu item.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -94,6 +103,7 @@
     },
     {
       "name": "AddMenuItem",
+      "funcName": "AddMenuItem",
       "description": "Adds a new item to the menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -149,6 +159,7 @@
     },
     {
       "name": "RemoveMenuItem",
+      "funcName": "RemoveMenuItem",
       "description": "Removes an item from the menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -157,6 +168,7 @@
     },
     {
       "name": "GetMenuControls",
+      "funcName": "GetMenuControls",
       "description": "Gets the current control flags of the menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." }
@@ -165,6 +177,7 @@
     },
     {
       "name": "SetMenuControls",
+      "funcName": "SetMenuControls",
       "description": "Sets the control flags for the menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
@@ -173,6 +186,7 @@
     },
     {
       "name": "GetMenuPosition",
+      "funcName": "GetMenuPosition",
       "description": "Gets the current cursor position for a player in the menu.",
       "parameters": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
