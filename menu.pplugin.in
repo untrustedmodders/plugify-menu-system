@@ -60,9 +60,9 @@
       "paramTypes": [
         { "name": "pSystem", "type": "ptr64", "description": "The menu system." },
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance to display." },
-        { "name": "aSlot", "type": "int", "description": "The player slot to display the menu to." },
-        { "name": "iStartPosition", "type": "int", "description": "The starting item position (use MENU_FIRST_ITEM_INDEX for default)." },
-        { "name": "nManyTimes", "type": "int", "description": "Display duration in seconds (use MENU_TIME_FOREVER for infinite)." }
+        { "name": "aSlot", "type": "int32", "description": "The player slot to display the menu to." },
+        { "name": "iStartPosition", "type": "int32", "description": "The starting item position (use MENU_FIRST_ITEM_INDEX for default)." },
+        { "name": "nManyTimes", "type": "int32", "description": "Display duration in seconds (use MENU_TIME_FOREVER for infinite)." }
       ],
       "retType": {
         "description": "Returns true if the menu was successfully displayed, otherwise false.",
@@ -131,7 +131,7 @@
       "description": "Gets the style flags of a menu item.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
-        { "name": "iItem", "type": "int", "description": "The item index to to get styles." }
+        { "name": "iItem", "type": "int32", "description": "The item index to to get styles." }
       ],
       "retType": {
         "description": "The style flags of the menu item.",
@@ -206,7 +206,7 @@
       "description": "Removes an item from the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
-        { "name": "iItem", "type": "int", "description": "The index of the item to remove." }
+        { "name": "iItem", "type": "int32", "description": "The index of the item to remove." }
       ],
       "retType": {
         "description": "No return value.",
@@ -251,7 +251,7 @@
       ],
       "retType": {
         "description": "The current cursor position in the menu.",
-        "type": "int"
+        "type": "int32"
       }
     }
   ]
