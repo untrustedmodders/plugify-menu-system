@@ -1,8 +1,21 @@
 {
-    global:
-        Plugify_*;
+	global:
+		Plugify_*;
 
-        MenuSystem;
+		GetMenuSystem;
+		GetMenuSystemProfiles;
+		CreateMenu;
+		DisplayMenu;
+		CloseMenu;
+		GetMenuProfile;
+		GetMenuTitle;
+		SetMenuTitle;
+		GetMenuItemSytles;
+		AddMenuItem;
+		RemoveMenuItem;
+		GetMenuControls;
+		SetMenuControls;
+		GetMenuPosition;
 
-    local: *;
+	local: *;
 };

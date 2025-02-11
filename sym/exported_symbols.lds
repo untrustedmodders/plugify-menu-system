@@ -2,4 +2,17 @@ Plugify_Init
 Plugify_PluginStart
 Plugify_PluginEnd
 
-MenuSystem
+GetMenuSystem
+GetMenuSystemProfiles
+CreateMenu
+DisplayMenu
+CloseMenu
+GetMenuProfile
+GetMenuTitle
+SetMenuTitle
+GetMenuItemSytles
+AddMenuItem
+RemoveMenuItem
+GetMenuControls
+SetMenuControls
+GetMenuPosition
