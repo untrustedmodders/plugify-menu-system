@@ -3,6 +3,6 @@
 # Licensed under the MIT license. See LICENSE file in the project root for details.
 
 configure_file(
-	${CMAKE_SOURCE_DIR}/menu.pplugin.in
-	${CMAKE_BINARY_DIR}/menu.pplugin
+	${CMAKE_SOURCE_DIR}/s2menu.pplugin.in
+	${CMAKE_BINARY_DIR}/s2menu.pplugin
 )
