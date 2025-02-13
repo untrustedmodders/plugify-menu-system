@@ -135,7 +135,38 @@
       ],
       "retType": {
         "description": "The style flags of the menu item.",
-        "type": "uint8"
+        "type": "uint8",
+        "enum": {
+          "name": "IMenuItemStyleFlags_t",
+          "description": "Enumeration representing the style of a menu item",
+          "values": [
+            {
+              "name": "MENU_ITEM_ACTIVE",
+              "value": 1,
+              "description": "Item is drawn selectable."
+            },
+            {
+              "name": "MENU_ITEM_HASNUMBER",
+              "value": 2,
+              "description": "Item has number."
+            },
+            {
+              "name": "MENU_ITEM_CONTROL",
+              "value": 4,
+              "description": "Item is control text (back/next/exit)."
+            },
+            {
+              "name": "MENU_ITEM_DEFAULT",
+              "value": 3,
+              "description": "Item should be drawn normally."
+            },
+            {
+              "name": "MENU_ITEM_FULL",
+              "value": 7,
+              "description": "Control item should be drawn normally."
+            }
+          ]
+        }
       }
     },
     {
@@ -145,7 +176,42 @@
       "description": "Adds a new item to the menu.",
       "paramTypes": [
         { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
-        { "name": "eFlags", "type": "uint8", "description": "Style flags for the item." },
+        {
+          "name": "eFlags",
+          "type": "uint8",
+          "description": "Style flags for the item.",
+          "enum": {
+            "name": "IMenuItemStyleFlags_t",
+            "description": "Enumeration representing the style of a menu item",
+            "values": [
+              {
+                "name": "MENU_ITEM_ACTIVE",
+                "value": 1,
+                "description": "Item is drawn selectable."
+              },
+              {
+                "name": "MENU_ITEM_HASNUMBER",
+                "value": 2,
+                "description": "Item has number."
+              },
+              {
+                "name": "MENU_ITEM_CONTROL",
+                "value": 4,
+                "description": "Item is control text (back/next/exit)."
+              },
+              {
+                "name": "MENU_ITEM_DEFAULT",
+                "value": 3,
+                "description": "Item should be drawn normally."
+              },
+              {
+                "name": "MENU_ITEM_FULL",
+                "value": 7,
+                "description": "Control item should be drawn normally."
+              }
+            ]
+          }
+        },
         { "name": "sContent", "type": "string", "description": "The text content of the item." },
         {
           "name": "pfnItemHandler",
@@ -223,7 +289,38 @@
       ],
       "retType": {
         "description": "The current control flags of the menu.",
-        "type": "uint8"
+        "type": "uint8",
+        "enum": {
+          "name": "IMenuItemControlFlags_t",
+          "description": "Enumeration representing the available menu control flags",
+          "values": [
+            {
+              "name": "MENU_ITEM_CONTROL_FLAG_PANEL",
+              "value": 0,
+              "description": "Just a panel with no control buttons."
+            },
+            {
+              "name": "MENU_ITEM_CONTROL_FLAG_BACK",
+              "value": 1,
+              "description": "Back button flag."
+            },
+            {
+              "name": "MENU_ITEM_CONTROL_FLAG_NEXT",
+              "value": 2,
+              "description": "Next button flag."
+            },
+            {
+              "name": "MENU_ITEM_CONTROL_FLAG_EXIT",
+              "value": 4,
+              "description": "Exit button flag."
+            },
+            {
+              "name": "MENU_ITEM_CONTROL_DEFAULT_FLAGS",
+              "value": 4,
+              "description": "Default controls."
+            }
+          ]
+        }
       }
     },
     {
@@ -232,7 +329,42 @@
       "group": "Menus",
       "description": "Sets the control flags for the menu.",
       "paramTypes": [
-        { "name": "pMenu", "type": "ptr64", "description": "The menu instance." },
+        {
+          "name": "pMenu",
+          "type": "ptr64",
+          "description": "The menu instance.",
+          "enum": {
+            "name": "IMenuItemControlFlags_t",
+            "description": "Enumeration representing the available menu control flags",
+            "values": [
+              {
+                "name": "MENU_ITEM_CONTROL_FLAG_PANEL",
+                "value": 0,
+                "description": "Just a panel with no control buttons"
+              },
+              {
+                "name": "MENU_ITEM_CONTROL_FLAG_BACK",
+                "value": 1,
+                "description": "Back button flag"
+              },
+              {
+                "name": "MENU_ITEM_CONTROL_FLAG_NEXT",
+                "value": 2,
+                "description": "Next button flag"
+              },
+              {
+                "name": "MENU_ITEM_CONTROL_FLAG_EXIT",
+                "value": 4,
+                "description": "Exit button flag"
+              },
+              {
+                "name": "MENU_ITEM_CONTROL_DEFAULT_FLAGS",
+                "value": 4,
+                "description": "Default controls"
+              }
+            ]
+          }
+        },
         { "name": "eNewControls", "type": "uint8", "description": "New control flags." }
       ],
       "retType": {
