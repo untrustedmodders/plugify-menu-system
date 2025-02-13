@@ -329,10 +329,12 @@
       "group": "Menus",
       "description": "Sets the control flags for the menu.",
       "paramTypes": [
+        { "name": "pMenu", "type": "ptr64", "description": "The menu instance."
+        },
         {
-          "name": "pMenu",
-          "type": "ptr64",
-          "description": "The menu instance.",
+          "name": "eNewControls",
+          "type": "uint8",
+          "description": "New control flags.",
           "enum": {
             "name": "IMenuItemControlFlags_t",
             "description": "Enumeration representing the available menu control flags",
@@ -364,8 +366,7 @@
               }
             ]
           }
-        },
-        { "name": "eNewControls", "type": "uint8", "description": "New control flags." }
+        }
       ],
       "retType": {
         "description": "No return value.",
