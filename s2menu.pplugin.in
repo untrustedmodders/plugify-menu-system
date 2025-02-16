@@ -137,31 +137,31 @@
         "description": "The style flags of the menu item.",
         "type": "uint8",
         "enum": {
-          "name": "IMenuItemStyleFlags_t",
+          "name": "MenuItemStyleFlags",
           "description": "Enumeration representing the style of a menu item",
           "values": [
             {
-              "name": "MENU_ITEM_ACTIVE",
+              "name": "Active",
               "value": 1,
               "description": "Item is drawn selectable."
             },
             {
-              "name": "MENU_ITEM_HASNUMBER",
+              "name": "HasNumber",
               "value": 2,
               "description": "Item has number."
             },
             {
-              "name": "MENU_ITEM_CONTROL",
+              "name": "Control",
               "value": 4,
               "description": "Item is control text (back/next/exit)."
             },
             {
-              "name": "MENU_ITEM_DEFAULT",
+              "name": "Default",
               "value": 3,
               "description": "Item should be drawn normally."
             },
             {
-              "name": "MENU_ITEM_FULL",
+              "name": "Full",
               "value": 7,
               "description": "Control item should be drawn normally."
             }
@@ -181,31 +181,31 @@
           "type": "uint8",
           "description": "Style flags for the item.",
           "enum": {
-            "name": "IMenuItemStyleFlags_t",
+            "name": "MenuItemStyleFlags",
             "description": "Enumeration representing the style of a menu item",
             "values": [
               {
-                "name": "MENU_ITEM_ACTIVE",
+                "name": "Active",
                 "value": 1,
                 "description": "Item is drawn selectable."
               },
               {
-                "name": "MENU_ITEM_HASNUMBER",
+                "name": "HasNumber",
                 "value": 2,
                 "description": "Item has number."
               },
               {
-                "name": "MENU_ITEM_CONTROL",
+                "name": "Control",
                 "value": 4,
                 "description": "Item is control text (back/next/exit)."
               },
               {
-                "name": "MENU_ITEM_DEFAULT",
+                "name": "Default",
                 "value": 3,
                 "description": "Item should be drawn normally."
               },
               {
-                "name": "MENU_ITEM_FULL",
+                "name": "Full",
                 "value": 7,
                 "description": "Control item should be drawn normally."
               }
@@ -291,31 +291,31 @@
         "description": "The current control flags of the menu.",
         "type": "uint8",
         "enum": {
-          "name": "IMenuItemControlFlags_t",
+          "name": "MenuItemControlFlags",
           "description": "Enumeration representing the available menu control flags",
           "values": [
             {
-              "name": "MENU_ITEM_CONTROL_FLAG_PANEL",
+              "name": "Panel",
               "value": 0,
               "description": "Just a panel with no control buttons."
             },
             {
-              "name": "MENU_ITEM_CONTROL_FLAG_BACK",
+              "name": "Back",
               "value": 1,
               "description": "Back button flag."
             },
             {
-              "name": "MENU_ITEM_CONTROL_FLAG_NEXT",
+              "name": "Next",
               "value": 2,
               "description": "Next button flag."
             },
             {
-              "name": "MENU_ITEM_CONTROL_FLAG_EXIT",
+              "name": "Exit",
               "value": 4,
               "description": "Exit button flag."
             },
             {
-              "name": "MENU_ITEM_CONTROL_DEFAULT_FLAGS",
+              "name": "Default",
               "value": 4,
               "description": "Default controls."
             }
@@ -336,33 +336,33 @@
           "type": "uint8",
           "description": "New control flags.",
           "enum": {
-            "name": "IMenuItemControlFlags_t",
+            "name": "MenuItemControlFlags",
             "description": "Enumeration representing the available menu control flags",
             "values": [
               {
-                "name": "MENU_ITEM_CONTROL_FLAG_PANEL",
+                "name": "Panel",
                 "value": 0,
-                "description": "Just a panel with no control buttons"
+                "description": "Just a panel with no control buttons."
               },
               {
-                "name": "MENU_ITEM_CONTROL_FLAG_BACK",
+                "name": "Back",
                 "value": 1,
-                "description": "Back button flag"
+                "description": "Back button flag."
               },
               {
-                "name": "MENU_ITEM_CONTROL_FLAG_NEXT",
+                "name": "Next",
                 "value": 2,
-                "description": "Next button flag"
+                "description": "Next button flag."
               },
               {
-                "name": "MENU_ITEM_CONTROL_FLAG_EXIT",
+                "name": "Exit",
                 "value": 4,
-                "description": "Exit button flag"
+                "description": "Exit button flag."
               },
               {
-                "name": "MENU_ITEM_CONTROL_DEFAULT_FLAGS",
+                "name": "Default",
                 "value": 4,
-                "description": "Default controls"
+                "description": "Default controls."
               }
             ]
           }
