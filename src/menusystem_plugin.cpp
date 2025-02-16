@@ -95,7 +95,7 @@ namespace plugify
 		return m_pfnMenu_GetItemStyles(pMenu, iItem);
 	}
 
-	void MenuSystem_Plugin::Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) {
+	int MenuSystem_Plugin::Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) {
 		return m_pfnMenu_AddItem(pMenu, eFlags, pszContent, pfnItemHandler, pData);
 	}
 

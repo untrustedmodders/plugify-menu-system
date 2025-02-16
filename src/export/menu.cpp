@@ -126,7 +126,7 @@ extern "C" PLUGIN_API unsigned char GetMenuItemStyles(IMenu *pMenu, int iItem) {
  * @param pfnItemHandler The callback function for item interactions.
  * @param pData         User-defined data to pass to the handler.
  */
-extern "C" PLUGIN_API void AddMenuItem(IMenu *pMenu, unsigned char eFlags, plg::string sContent, plugify::MenuItemHandlerFn_t pfnItemHandler, void *pData) {
+extern "C" PLUGIN_API int AddMenuItem(IMenu *pMenu, unsigned char eFlags, plg::string sContent, plugify::MenuItemHandlerFn_t pfnItemHandler, void *pData) {
 	return plugify::g_pMenuBinging->Menu_AddItem(pMenu, eFlags, sContent.c_str(), pfnItemHandler, pData);
 }
 

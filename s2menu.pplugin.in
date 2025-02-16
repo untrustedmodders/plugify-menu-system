@@ -254,7 +254,8 @@
               }
             ],
             "retType": {
-              "type": "void"
+              "type": "int32",
+              "description": "The menu item position index who added."
             }
           }
         },

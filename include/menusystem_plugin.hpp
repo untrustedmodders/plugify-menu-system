@@ -53,7 +53,7 @@ namespace plugify {
 		const char *Menu_GetTitle(IMenu *pMenu) override;
 		void Menu_SetTitle(IMenu *pMenu, const char *pszNewText) override;
 		unsigned char Menu_GetItemSytles(IMenu *pMenu, int iItem) override;
-		void Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) override;
+		int Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) override;
 		void Menu_RemoveItem(IMenu *pMenu, int iItem) override;
 		unsigned char Menu_GetItemControls(IMenu *pMenu) override;
 		void Menu_SetItemControls(IMenu *pMenu, unsigned char eNewControls) override;
@@ -84,7 +84,7 @@ namespace plugify {
 		using Menu_GetTitleFn_t = const char *(*)(IMenu *pMenu);
 		using Menu_SetTitleFn_t = void (*)(IMenu *pMenu, const char *pszNewText);
 		using Menu_GetItemStylesFn_t = unsigned char (*)(IMenu *pMenu, int iItem);
-		using Menu_AddItemFn_t = void (*)(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData);
+		using Menu_AddItemFn_t = int (*)(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData);
 		using Menu_RemoveItemFn_t = void (*)(IMenu *pMenu, int iItem);
 
 		using Menu_GetItemControlsFn_t = unsigned char (*)(IMenu *pMenu);

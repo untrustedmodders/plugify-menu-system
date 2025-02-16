@@ -35,7 +35,7 @@ namespace plugify {
 		virtual const char *Menu_GetTitle(IMenu *pMenu) = 0;
 		virtual void Menu_SetTitle(IMenu *pMenu, const char *pszNewText) = 0;
 		virtual unsigned char Menu_GetItemSytles(IMenu *pMenu, int iItem) = 0;
-		virtual void Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) = 0;
+		virtual int Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) = 0;
 		virtual void Menu_RemoveItem(IMenu *pMenu, int iItem) = 0;
 		virtual unsigned char Menu_GetItemControls(IMenu *pMenu) = 0;
 		virtual void Menu_SetItemControls(IMenu *pMenu, unsigned char eNewControls) = 0;
