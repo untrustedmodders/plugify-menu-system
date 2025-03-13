@@ -8,7 +8,7 @@ if(POLICY CMP0092)
 	cmake_policy(SET CMP0092 NEW) # Don't add -W3 warning level by default.
 endif()
 
-project(plugify-menu_system
+project(plugify-menu-system
 	VERSION 1.0.0
 	DESCRIPTION "Plugify - Menu System"
 	HOMEPAGE_URL "https://github.com/Wend4r/mms2-sample"
@@ -20,7 +20,7 @@ string(TOLOWER "${PROJECT_NAME_SUBSTRING}" PROJECT_NAME_LOWER)
 string(TOUPPER "${PROJECT_NAME_SUBSTRING}" PROJECT_NAME_UPPER)
 set(PROJECT_PACKAGE "${PROJECT_NAME}-${PROJECT_VERSION}")
 
-set(PROJECT_OUTPUT_NAME "menu")
+set(PROJECT_OUTPUT_NAME "s2menu")
 
 set(PROJECT_AUTHOR "Wend4r")
 set(PROJECT_DESCRIPTION_FULL "Plugify - The Menu System for Source 2 games")

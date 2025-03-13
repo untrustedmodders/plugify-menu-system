@@ -1,14 +1,14 @@
 {
   "fileVersion": 1,
-  "version": "${PROJECT_VERSION}",
+  "version": "${S2MENU_VERSION}",
   "friendlyName": "MenuSystem API",
   "description": "The Menu System for Source 2 games.",
   "createdBy": "Wend4r",
-  "createdByURL": "https://github.com/untrustedmodders/plugify-menu_system",
-  "docsURL": "https://github.com/untrustedmodders/plugify-menu_system",
-  "downloadURL": "https://github.com/untrustedmodders/plugify-menu_system/releases/download/${PROJECT_VERSION}/${PROJECT_PACKAGE}.zip",
-  "updateURL": "https://untrustedmodders.github.io/plugify-menu_system/menusystem.json",
-  "entryPoint": "bin/menu",
+  "createdByURL": "https://github.com/untrustedmodders/plugify-menu-system",
+  "docsURL": "https://github.com/untrustedmodders/plugify-menu-system",
+  "downloadURL": "https://github.com/untrustedmodders/plugify-menu-system/releases/download/v${S2MENU_VERSION}/${S2MENU_PACKAGE}.zip",
+  "updateURL": "https://untrustedmodders.github.io/plugify-menu-system/menusystem.json",
+  "entryPoint": "bin/s2menu",
   "supportedPlatforms": [],
   "languageModule": {
     "name": "cpp"
