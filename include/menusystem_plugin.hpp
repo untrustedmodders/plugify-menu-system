@@ -25,8 +25,8 @@ class CUtlString;
 class IFileSystem;
 class KeyValues3;
 
-namespace plugify {
-	class MenuSystem_Plugin final : public plg::IPluginEntry, public IMenuBinging {
+namespace menu {
+class MenuSystem_Plugin final : public plg::IPluginEntry, public menu::IMenuBinging {
 	public:
 		using Interface_t = plg::IPluginEntry;
 		using BingingInterface_t = IMenuBinging;
@@ -53,7 +53,7 @@ namespace plugify {
 		const char *Menu_GetTitle(IMenu *pMenu) override;
 		void Menu_SetTitle(IMenu *pMenu, const char *pszNewText) override;
 		unsigned char Menu_GetItemSytles(IMenu *pMenu, int iItem) override;
-		int Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, MenuItemHandlerFn_t pfnItemHandler, void *pData) override;
+		int Menu_AddItem(IMenu *pMenu, unsigned char eFlags, const char *pszContent, menu::MenuItemHandlerFn_t pfnItemHandler, void *pData) override;
 		void Menu_RemoveItem(IMenu *pMenu, int iItem) override;
 		unsigned char Menu_GetItemControls(IMenu *pMenu) override;
 		void Menu_SetItemControls(IMenu *pMenu, unsigned char eNewControls) override;

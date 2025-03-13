@@ -14,7 +14,7 @@ class IMenuProfile;
 class IMenu;
 
 
-namespace plugify {
+namespace menu {
 	using MenuItemHandlerFn_t = void (*)(IMenu *pMenu, CPlayerSlot aSlot, int iItem, int iItemOnPage, void *pData);
 
 	class IMenuBinging {
