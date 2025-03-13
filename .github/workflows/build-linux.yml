@@ -50,11 +50,6 @@ jobs:
         compiler:
           [
             {
-              name: Clang,
-              cc: clang,
-              cxx: clang++,
-            },
-            {
               name: GCC,
               cc: gcc-12,
               cxx: g++-12,
