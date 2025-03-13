@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/untrustedmodders/plugify-menu-system/compare/v1.1.0...v1.1.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* change build script ([bd92afc](https://github.com/untrustedmodders/plugify-menu-system/commit/bd92afc412502dea3e465c5c9252720059808374))
+
 ## [1.1.0](https://github.com/untrustedmodders/plugify-menu_system/compare/1.0.0...v1.1.0) (2025-03-13)
 
 
