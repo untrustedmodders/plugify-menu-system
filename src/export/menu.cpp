@@ -1,6 +1,6 @@
 #include <plugin_export.h>
 
-#include <plugify/any.hpp>
+//#include <plugify/any.hpp>
 #include <plugify/string.hpp>
 
 #include <imenubinding.hpp>
@@ -19,7 +19,7 @@ PLUGIFY_WARN_IGNORE(4190)
  * @return              Pointer to the menu system.
  */
 extern "C" PLUGIN_API IMenuSystem *GetMenuSystem() {
-	return plugify::g_pMenuBinging->MenuSystem();
+	return menu::g_pMenuBinging->MenuSystem();
 }
 
 /**
@@ -30,7 +30,7 @@ extern "C" PLUGIN_API IMenuSystem *GetMenuSystem() {
  * @return              Pointer to the menu profile system.
  */
 extern "C" PLUGIN_API IMenuProfileSystem *GetMenuSystemProfiles(IMenuSystem *pSystem) {
-	return plugify::g_pMenuBinging->MenuSystem_GetProfiles(pSystem);
+	return menu::g_pMenuBinging->MenuSystem_GetProfiles(pSystem);
 }
 
 /**
@@ -42,7 +42,7 @@ extern "C" PLUGIN_API IMenuProfileSystem *GetMenuSystemProfiles(IMenuSystem *pSy
  * @return              Pointer to the created menu instance.
  */
 extern "C" PLUGIN_API IMenu *CreateMenu(IMenuSystem *pSystem, IMenuProfile *pProfile) {
-	return plugify::g_pMenuBinging->MenuSystem_CreateInstance(pSystem, pProfile);
+	return menu::g_pMenuBinging->MenuSystem_CreateInstance(pSystem, pProfile);
 }
 
 /**
@@ -57,7 +57,7 @@ extern "C" PLUGIN_API IMenu *CreateMenu(IMenuSystem *pSystem, IMenuProfile *pPro
  * @return              true if displayed successfully, false otherwise.
  */
 extern "C" PLUGIN_API bool DisplayMenu(IMenuSystem *pSystem, IMenu *pMenu, CPlayerSlot aSlot, int iStartPostion, int nManyTimes) {
-	return plugify::g_pMenuBinging->MenuSystem_DisplayInstanceToPlayer(pSystem, pMenu, aSlot, iStartPostion, nManyTimes);
+	return menu::g_pMenuBinging->MenuSystem_DisplayInstanceToPlayer(pSystem, pMenu, aSlot, iStartPostion, nManyTimes);
 }
 
 /**
@@ -69,7 +69,7 @@ extern "C" PLUGIN_API bool DisplayMenu(IMenuSystem *pSystem, IMenu *pMenu, CPlay
  * @return              true if closed successfully, false otherwise.
  */
 extern "C" PLUGIN_API bool CloseMenu(IMenuSystem *pSystem, IMenu *pMenu) {
-	return plugify::g_pMenuBinging->MenuSystem_CloseInstance(pSystem, pMenu);
+	return menu::g_pMenuBinging->MenuSystem_CloseInstance(pSystem, pMenu);
 }
 
 /**
@@ -80,8 +80,8 @@ extern "C" PLUGIN_API bool CloseMenu(IMenuSystem *pSystem, IMenu *pMenu) {
  * 
  * @return              Pointer to the requested menu profile, or nullptr if not found.
  */
-extern "C" PLUGIN_API IMenuProfile *GetMenuProfile(IMenuProfileSystem *pProfileSystem, plg::string sName) {
-	return plugify::g_pMenuBinging->MenuProfileSystem_Get(pProfileSystem, sName.c_str());
+extern "C" PLUGIN_API IMenuProfile *GetMenuProfile(IMenuProfileSystem *pProfileSystem, const plg::string& sName) {
+	return menu::g_pMenuBinging->MenuProfileSystem_Get(pProfileSystem, sName.c_str());
 }
 
 /**
@@ -92,7 +92,7 @@ extern "C" PLUGIN_API IMenuProfile *GetMenuProfile(IMenuProfileSystem *pProfileS
  * @return              The title text as a string.
  */
 extern "C" PLUGIN_API plg::string GetMenuTitle(IMenu *pMenu) {
-	return plugify::g_pMenuBinging->Menu_GetTitle(pMenu);
+	return menu::g_pMenuBinging->Menu_GetTitle(pMenu);
 }
 
 /**
@@ -101,8 +101,8 @@ extern "C" PLUGIN_API plg::string GetMenuTitle(IMenu *pMenu) {
  * @param pMenu         The menu instance.
  * @param sName         The new title text.
  */
-extern "C" PLUGIN_API void SetMenuTitle(IMenu *pMenu, plg::string sName) {
-	return plugify::g_pMenuBinging->Menu_SetTitle(pMenu, sName.c_str());
+extern "C" PLUGIN_API void SetMenuTitle(IMenu *pMenu, const plg::string& sName) {
+	return menu::g_pMenuBinging->Menu_SetTitle(pMenu, sName.c_str());
 }
 
 /**
@@ -114,7 +114,7 @@ extern "C" PLUGIN_API void SetMenuTitle(IMenu *pMenu, plg::string sName) {
  * @return              The style flags as a bitmask (IMenu::ItemStyleFlags_t).
  */
 extern "C" PLUGIN_API unsigned char GetMenuItemStyles(IMenu *pMenu, int iItem) {
-	return plugify::g_pMenuBinging->Menu_GetItemSytles(pMenu, iItem);
+	return menu::g_pMenuBinging->Menu_GetItemSytles(pMenu, iItem);
 }
 
 /**
@@ -126,8 +126,8 @@ extern "C" PLUGIN_API unsigned char GetMenuItemStyles(IMenu *pMenu, int iItem) {
  * @param pfnItemHandler The callback function for item interactions.
  * @param pData         User-defined data to pass to the handler.
  */
-extern "C" PLUGIN_API int AddMenuItem(IMenu *pMenu, unsigned char eFlags, plg::string sContent, plugify::MenuItemHandlerFn_t pfnItemHandler, void *pData) {
-	return plugify::g_pMenuBinging->Menu_AddItem(pMenu, eFlags, sContent.c_str(), pfnItemHandler, pData);
+extern "C" PLUGIN_API int AddMenuItem(IMenu *pMenu, unsigned char eFlags, const plg::string& sContent, menu::MenuItemHandlerFn_t pfnItemHandler, void *pData) {
+	return menu::g_pMenuBinging->Menu_AddItem(pMenu, eFlags, sContent.c_str(), pfnItemHandler, pData);
 }
 
 /**
@@ -137,7 +137,7 @@ extern "C" PLUGIN_API int AddMenuItem(IMenu *pMenu, unsigned char eFlags, plg::s
  * @param iItem         The index of the item to remove.
  */
 extern "C" PLUGIN_API void RemoveMenuItem(IMenu *pMenu, int iItem) {
-	return plugify::g_pMenuBinging->Menu_RemoveItem(pMenu, iItem);
+	return menu::g_pMenuBinging->Menu_RemoveItem(pMenu, iItem);
 }
 
 /**
@@ -148,7 +148,7 @@ extern "C" PLUGIN_API void RemoveMenuItem(IMenu *pMenu, int iItem) {
  * @return              The control flags as a bitmask (IMenu::ItemControlFlags_t).
  */
 extern "C" PLUGIN_API unsigned char GetMenuControls(IMenu *pMenu) {
-	return plugify::g_pMenuBinging->Menu_GetItemControls(pMenu);
+	return menu::g_pMenuBinging->Menu_GetItemControls(pMenu);
 }
 
 /**
@@ -158,7 +158,7 @@ extern "C" PLUGIN_API unsigned char GetMenuControls(IMenu *pMenu) {
  * @param eNewControls  New control flags (IMenu::ItemControlFlags_t).
  */
 extern "C" PLUGIN_API void SetMenuControls(IMenu *pMenu, unsigned char eNewControls) {
-	return plugify::g_pMenuBinging->Menu_SetItemControls(pMenu, eNewControls);
+	return menu::g_pMenuBinging->Menu_SetItemControls(pMenu, eNewControls);
 }
 
 /**
@@ -170,7 +170,7 @@ extern "C" PLUGIN_API void SetMenuControls(IMenu *pMenu, unsigned char eNewContr
  * @return              The current item position index.
  */
 extern "C" PLUGIN_API int GetMenuPosition(IMenu *pMenu, CPlayerSlot aSlot) {
-	return plugify::g_pMenuBinging->Menu_GetCurrentPosition(pMenu, aSlot);
+	return menu::g_pMenuBinging->Menu_GetCurrentPosition(pMenu, aSlot);
 }
 
 PLUGIFY_WARN_POP()

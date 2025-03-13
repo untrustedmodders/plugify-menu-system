@@ -12,7 +12,7 @@
 		return false; \
 	}
 
-namespace plugify
+namespace menu
 {
 	static MenuSystem_Plugin s_aMenuSystemPlugin;
 	MenuSystem_Plugin *g_pMenuSystemPlugin = &s_aMenuSystemPlugin;
@@ -176,4 +176,4 @@ namespace plugify
 	}
 }; // namespace plugify
 
-EXPOSE_PLUGIN(PLUGIN_API, &plugify::s_aMenuSystemPlugin);
+EXPOSE_PLUGIN(PLUGIN_API, menu::MenuSystem_Plugin, &menu::s_aMenuSystemPlugin);

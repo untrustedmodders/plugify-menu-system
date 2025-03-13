@@ -48,7 +48,6 @@ endfunction()
 set_or_external_dir(DYNLIBUTILS_DIR "dynlibutils")
 set_or_external_dir(FMT_DIR "fmt")
 set_or_external_dir(LOGGER_DIR "logger")
-set_or_external_dir(PLUGIFY_DIR "plugify")
 set_or_external_dir(SOURCESDK_DIR "sourcesdk")
 
 include(cmake/platform/shared.cmake)
@@ -56,7 +55,6 @@ include(cmake/platform/shared.cmake)
 include(cmake/dynlibutils.cmake)
 include(cmake/fmt.cmake)
 include(cmake/logger.cmake)
-include(cmake/plugify.cmake)
 include(cmake/sourcesdk.cmake)
 
 set(SOURCE_FILES
@@ -91,11 +89,11 @@ include(cmake/menusystem/generate_exports.cmake)
 include(cmake/menusystem/generate_pplugin.cmake)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-	C_STANDARD 17
+	C_STANDARD 20
 	C_STANDARD_REQUIRED ON
 	C_EXTENSIONS OFF
 
-	CXX_STANDARD 17
+	CXX_STANDARD 20
 	CXX_STANDARD_REQUIRED ON
 	CXX_EXTENSIONS OFF
 )
@@ -111,7 +109,7 @@ endif()
 target_compile_options(${PROJECT_NAME} PRIVATE ${COMPILER_OPTIONS} ${SOURCESDK_COMPILE_OPTIONS})
 target_link_options(${PROJECT_NAME} PRIVATE ${LINK_OPTIONS} ${SOURCESDK_LINK_OPTIONS})
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE ${COMPILE_DEFINITIONS} ${PLUGIFY_COMPILE_DEFINITIONS} ${SOURCESDK_COMPILE_DEFINITIONS})
-target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE_DIRS} ${DYNLIBUTILS_INCLUDE_DIRS} ${FMT_INCLUDE_DIRS} ${LOGGER_INCLUDE_DIRS} ${PLUGIFY_INCLUDE_DIRS} ${SOURCESDK_INCLUDE_DIRS})
+target_compile_definitions(${PROJECT_NAME} PRIVATE ${COMPILE_DEFINITIONS} ${SOURCESDK_COMPILE_DEFINITIONS})
+target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE_DIRS} ${DYNLIBUTILS_INCLUDE_DIRS} ${FMT_INCLUDE_DIRS} ${LOGGER_INCLUDE_DIRS} ${SOURCESDK_INCLUDE_DIRS})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE ${LINK_LIBRARIES} ${DYNLIBUTILS_BINARY_DIR} ${LOGGER_BINARY_DIR} ${SOURCESDK_TIER0_BINARY_DIR} ${SOURCESDK_TIER1_BINARY_DIR})
