@@ -70,8 +70,8 @@ jobs:
       - name: Clean build directory
         run: |
           mkdir -p build/output/bin
-          cp build/${{ env.BUILD_TYPE }}/pms.dll build/output/bin
-          cp build/pms.pplugin build/output
+          cp build/${{ env.BUILD_TYPE }}/s2menu.dll build/output/bin
+          cp build/s2menu.pplugin build/output
 
       - uses: actions/upload-artifact@v4
         with:
@@ -108,8 +108,8 @@ jobs:
       - name: Clean build directory
         run: |
           mkdir -p build/output/bin
-          mv build/libdyncall.so build/output/bin
-          mv build/pms.pplugin build/output
+          mv build/libs2menu.so build/output/bin
+          mv build/s2menu.pplugin build/output
 
       - uses: actions/upload-artifact@v4
         with:
