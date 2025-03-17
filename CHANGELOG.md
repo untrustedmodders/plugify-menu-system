@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2](https://github.com/untrustedmodders/plugify-menu-system/compare/v1.1.1...v1.1.2) (2025-03-17)
+
+
+### Bug Fixes
+
+* typo ([50da09b](https://github.com/untrustedmodders/plugify-menu-system/commit/50da09b72e08354cb159a5423aad3b00925dd3cd))
+* update action build ([f667ec6](https://github.com/untrustedmodders/plugify-menu-system/commit/f667ec6e54838f42cd65a0df71da71f59afeff7c))
+* update plugify ([1d5f7c6](https://github.com/untrustedmodders/plugify-menu-system/commit/1d5f7c6cc79d7935d1d3a9685005c80786ebfdb5))
+
 ## [1.1.1](https://github.com/untrustedmodders/plugify-menu-system/compare/v1.1.0...v1.1.1) (2025-03-13)
 
 
